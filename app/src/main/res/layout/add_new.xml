@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:gravity="center">
+    <!-- You can add a TextView to show the Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="22sp"
+        android:text="Add a Term in Dictionary"/>
+    <!-- Use two EditTexts to take input for Term and Full Form -->
+    <EditText
+        android:id="@+id/etNewTerm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:hint="Term" />
+
+    <EditText
+        android:id="@+id/etNewTermFullForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:hint="Full Form"
+        android:inputType="textMultiLine"
+        android:maxLines="5"
+        android:minLines="1" />
+    <!-- An ImageButton to save record in database. -->
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@null"
+        android:onClick="addNewTerm"
+        android:src="@drawable/save" />
+    <!-- And a TextView to show the result of the operation  -->
+    <TextView
+        android:id="@+id/tvAddResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"/>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adViewAddNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner_adunit_id">
+    </com.google.android.gms.ads.AdView>
+</LinearLayout>
